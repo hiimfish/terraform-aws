@@ -1,0 +1,12 @@
+services:
+  consul:
+    image: hashicorp/consul:latest
+    volumes:
+      - consul-data:/consul/data
+    environment:
+      - CONSUL_HTTP_TOKEN="01a56e2d-a96a-4ca5-9d39-d5152015f533"
+    ports:
+      - 8500:8500/tcp
+
+volumes:
+  consul-data:
